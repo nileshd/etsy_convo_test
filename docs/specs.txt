@@ -1,0 +1,41 @@
+# Task
+Design a site messaging backend for Etsy.
+
+# Requirements
+Etsy members use a feature called Convos to send short messages to each other, similar to email. Each convo has the following attributes:
+
+* A sender
+* A recipient
+* A subject line, max 140 characters
+* A body, max 64k characters
+* A status to show if the convo has been read
+
+Additionally, convos are grouped by threads, so the data model needs to show if the convo was in reply to a previous convo. (Replies also share the same subject line as previous convos in the thread.)
+
+We'd like you to design the backend for this feature. The design should include the following:
+
+* A detailed description of any database tables necessary, including data types and indices. (You may assume the existence of a "users" table with an numeric `user_id` field.)
+* A detailed description of a RESTful API for Convos, with full support for CRUD operations (Create, Read, Update and Delete.) Document URLs and methods for the API as well as any input parameters necessary. The output format for the API should also be documented. Make sure that your API includes a way to read multiple convos in one step (so that we can show the user her inbox as a list of convos.)
+
+## Evaluation
+You're free to design this feature in any way that you like, but please show us that you're familiar with the following concepts:
+
+* Data normalization and referential integrity
+* Data serialization
+* RESTful APIs and conventions
+* HTTP protocol and conventions
+
+## Extra Credit
+You're free to take this assignment further, if you wish. Some suggested additions follow, but if you have an idea you think is interesting, don't feel obligated to use one of these.
+
+* Some users have thousands of convos. Modify your API to support some sort of paginated loading.
+* With pagination, what happens when a process is paginating through convos, and another process creates a new convo? Ensure your design can handle this case and explain the issue.
+* Discuss caching: can we cache API responses? Can we leverage HTTP features to provide caching guidelines to API clients? How do we handle cache invalidation?
+* Implementation: using the language and/or framework of your choice, implement your API.
+
+# Submissions
+We’re big fans of Github, so that’s our preferred way for you to hand in your assignment. But if you’d rather send us a .ZIP archive of your files, that’s great too. You can send it as an email attachment, or as a link to your Dropbox.
+
+
+There’s no particular hurry, but once you get this email, please let us know how long you think it’ll take to complete the assignment. And above all, have fun!
+
