@@ -101,7 +101,7 @@ function format_json($json, $html = false, $tabspaces = null)
 
 		<div class="btn btn-info btn-large">GET</div>
 
-		/users/{id}/convos
+		/users/{user_id}/convos
 
 	</div>
 
@@ -110,7 +110,7 @@ function format_json($json, $html = false, $tabspaces = null)
 	<div id="description" class="info_box">
 		<h3>Description</h3>
 		This API gets the conversations threads for a user, such user denoted
-		by the {id} param in the url. It gets only the top
+		by the {user_id} param in the url. It gets only the top
 		level conversations and show the thread count as well (number of
 		replies). One can optionally want to get only the sent items by passing in optional query parameters. One can also get only the read vs unread messages too.
 	</div>
@@ -242,7 +242,7 @@ EOT;
 
 		<div class="btn btn-info btn-large">GET</div>
 
-		/users/{id}
+		/users/{user_id}
 
 	</div>
 
@@ -250,7 +250,7 @@ EOT;
 
 	<div id="description" class="info_box">
 		<h3>Description</h3>
-		This API gets a user by Id.
+		This API gets a user by Id denoted by {user_id}.
 	</div>
 
 

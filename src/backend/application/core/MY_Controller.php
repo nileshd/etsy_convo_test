@@ -77,7 +77,6 @@ class MY_Controller extends CI_Controller
 			// grabbing all url friendly params ie: /id/12/name/john
 			$url_params = $this->uri->segment_array ();
 
-			print_r ( $url_params );
 
 			$controller = $url_params [2];
 			$function = $url_params [3];
@@ -91,10 +90,7 @@ class MY_Controller extends CI_Controller
 			$req_params->url = $url_params;
 			$req_params->body = file_get_contents ( 'php://input' );
 
-			echo $http_method;
-			print_r ( $req_params );
 
-			exit ();
 
 			if (method_exists ( $this, $function ))
 			{

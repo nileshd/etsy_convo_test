@@ -7,7 +7,7 @@
 		<td>
 			<div class="btn  btn-default btn-small">GET</div>
 		</td>
-		<td><a href="/apidoc/user_ws"> /users/{id}/convos </a></td>
+		<td><a href="/apidoc/user_ws"> /users/{user_id}/convos </a></td>
 		<td><a href="/apidoc/user_ws"> Get Convos by user </a></td>
 	</tr>
 
@@ -15,7 +15,7 @@
 		<td>
 			<div class="btn  btn-default btn-small">GET</div>
 		</td>
-		<td><a href="/apidoc/user_ws"> /users/{id} </a></td>
+		<td><a href="/apidoc/user_ws"> /users/{user_id} </a></td>
 		<td><a href="/apidoc/user_ws"> Get User by Id </a></td>
 	</tr>
 </table>
