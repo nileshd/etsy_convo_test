@@ -527,57 +527,6 @@ class Validation  {
 
 
 
-
-
-
-
-    /**
-     * Check that easy access direction is correct.
-     *
-     * @access public
-     * @param mixed $fields
-     * @param string $err_msg (default: '')
-     * @return void
-     */
-    public function easy_access_direction($fields, $err_msg = '') {
-
-        $CI = & get_instance();
-        $replacements = array();
-        $replacements["[[FIELDS]]"] = $fields;
-
-
-        if ($err_msg == "")
-        {
-        	$validation_code = "132";
-        	$error_msg_template = $CI->lang->line("validation_".$validation_code);
-
-        	$err_msg = $this->replace_placeholders($error_msg_template, $replacements);
-        }
-        else
-        {
-        	$err_msg = $this->replace_placeholders($error_msg_template, $err_msg);
-        }
-        $this->_parse($fields);
-
-        foreach ($fields as $v)
-        {
-            if ($this->is_valid())
-            {
-                if (!empty($this->data[$v]))
-                {
-                    if ($this->data[$v] != 'enter' && $this->data[$v] != 'exit')
-                    {
-                        $this->_error($err_msg);
-                    }
-                }
-            }
-        }
-        return $this;
-    }
-
-
-
-
 	public function float($fields, $err_msg = '') {
 
 			$CI = & get_instance ();

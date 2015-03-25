@@ -5,6 +5,7 @@ if (! defined('BASEPATH'))
     exit('No direct script access allowed');
 }
 
+include_once 'application/models/container/user_info.php';
 require_once('application/libraries/exceptions/EtsyException.php');
 
 /**

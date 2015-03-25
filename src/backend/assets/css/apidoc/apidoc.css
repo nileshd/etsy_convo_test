@@ -1,0 +1,110 @@
+.apidoc {
+	padding: 20px;
+}
+
+h2 {
+	font-size: 24px;
+	color: #009966;
+}
+
+h3 {
+	font-size: 20px;
+	color: #084B8A
+}
+
+.error_code {
+	background-color: #F6CECE;
+	font-weight: bold;
+}
+
+.required_parameter {
+	background-color: #CEF6CE;
+	font-weight: bold;
+}
+
+
+.info_box {
+	background-color: #E8E8E8;
+	color: #000000;
+	font-size: 15px;
+    padding : 13px;
+     margin-top : 10px;
+	 border: 1px solid #cccccc ;
+}
+
+.info_box h3
+{
+	padding:0px;
+    margin:0px;
+	color: #3333cc;
+	font-size: 20px;
+
+}
+
+
+.params_table_row_head
+{
+	height : 40px;
+vertical-align: middle;
+	font-size: 18px;
+	font-weight : bold;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+.param_row
+{
+font-size: 14px;
+}
+
+.param_name
+{
+	font-weight : bolder;
+	font-size: 15px;
+	color:#000066;
+
+}
+
+.error_table_row_head
+{
+	height : 40px;
+vertical-align: middle;
+	font-size: 18px;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+.error_row
+{
+font-size: 14px;
+}
+
+.error_name
+{
+	font-weight : bolder;
+	font-size: 15px;
+	color:#000066;
+
+}
+
+.url_endpoint {
+	background-color: #000000;
+	color: #01DF3A;
+	font-size: 30px;
+	padding: 30px;
+
+}
+
+.well {
+	margin-top: 7px;
+}
+
+.desc_box {
+	background-color: yellow;
+}
+
+.relevant_return_box {
+
+}
+}
+}

@@ -42,10 +42,21 @@ $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 
 
+$route['apidoc/(:any)'] = "pages/exec_method";
 
-// Etsy Convo Routes
-$route['api/convos/(:any)'] 	= "etsy_convo/front_controller";
-$route['api/user/(:any)'] 	= "etsy_user/front_controller";
+// users
+$route['api/users/(:any)/convos'] = "etsy_user/rest_front_controller";
+$route['api/users/(:any)'] = "etsy_user/rest_front_controller";
+
+// get convos by id, PUT, DELETE
+$route['api/convos/(:any)/thread'] = "etsy_convo/rest_front_controller";
+$route['api/convos/(:any)'] = "etsy_convo/rest_front_controller";
+
+// POST
+$route['api/convos'] = "etsy_convo/rest_front_controller";
+
+
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
