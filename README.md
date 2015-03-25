@@ -6,18 +6,29 @@ Database
 
 I created two tables the convos and user tables.
 
-You can see the full structure in the db folder in the initial.sql file.
+You can see the full structure in the db folder in the initial.sql file at https://github.com/nileshd/etsy_convo_test/blob/master/db/initial.sql
 
-convos
+************
+convos table
+*************
    id  int(11)
+
    sender_id int(11)       - FK to users.id, indexd
+
    recipient_id int(11)    - FK to users.id, indexed
+
    parent_id int(11)       - FK to convos.id, indexed
+
    root_parent_id int(11)  - FK to convos.id, indexed
+
    subject varchar(140)
+
    body text
+
    status enum('read','unread')      indexed
+
    date_created timestamp
+
 
 I opted to do pre-emptive optimization by having the root_parent_id which the topmost level convo in each row rather than calculating the entire tree at run time each time.
 
@@ -100,3 +111,10 @@ Things not finished in Implementation
  * When getting threaded message, get the title of first message for children's subject
  * API serializes only in standard JSON, don't offer other formats such as XML or Serialized PHP data
  * No Authentication of Owner of Asset to do operation on the assets
+ * No Security or authorization on Usage of API
+
+
+
+
+
+ Lots more need to be done for production ready, but with limited time, that's all I could actually put in the hours between my job interviews here in Austin.
