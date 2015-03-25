@@ -6,7 +6,11 @@ Database
 
 I created two tables the convos and user tables.
 
-You can see the full structure in the db folder in the initial.sql file at https://github.com/nileshd/etsy_convo_test/blob/master/db/initial.sql
+You can see the full structure in the db folder in the initial.sql file at 
+
+     https://github.com/nileshd/etsy_convo_test/blob/master/db/initial.sql
+
+You can see the foreign Keys and index definitions in that file. The parent_ids are foreign keyed to the id of the same table and set to have cascade on delete to manage the hierachy when deletion happens. The sender_id and user_id are fk-ed to the user table.
 
 ************
 convos table
@@ -50,6 +54,7 @@ RestFul APIs
 The APIs implemented are
 
 **CONVOS**
+
 GET /convos/{id}
 
 GET /convos/{id}/thread
@@ -125,6 +130,7 @@ With proxy caches for example, Varnish has good support for invalidation. If we 
 **************************************
 Things not finished in Implementation
 **************************************
+ * All http codes are right now 200. In a perfect rest world, the http code need to be more accurate based on event.
  * Localized Messages - Messages should be extracted to a language file for internationalization
  * No Implementation for PATCH and HEAD Rest Methods
  * More validation need to be done to check each user input before passing to backend
