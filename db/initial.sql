@@ -20,6 +20,24 @@ SET time_zone = "+00:00";
 -- Table structure for table `convos`
 --
 
+CREATE TABLE `users` (
+`id` int(11) unsigned NOT NULL,
+  `name` varchar(140) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`) VALUES
+(1, 'Nilesh'),
+(2, 'John'),
+(3, 'Lisa'),
+(4, 'Jane');
+
+
+
+
 DROP TABLE IF EXISTS `convos`;
 CREATE TABLE `convos` (
 `id` int(11) unsigned NOT NULL,
@@ -52,6 +70,11 @@ INSERT INTO `convos` (`id`, `sender_id`, `recipient_id`, `parent_id`, `root_pare
 --
 -- Indexes for dumped tables
 --
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `convos`
@@ -85,3 +108,6 @@ ADD CONSTRAINT `fk_convo_parent_id` FOREIGN KEY (`parent_id`) REFERENCES `convos
 ADD CONSTRAINT `fk_convo_root_parent_id` FOREIGN KEY (`root_parent_id`) REFERENCES `convos` (`id`) ON DELETE CASCADE,
 ADD CONSTRAINT `fk_recipient_id` FOREIGN KEY (`recipient_id`) REFERENCES `users` (`id`),
 ADD CONSTRAINT `fk_sender_id` FOREIGN KEY (`sender_id`) REFERENCES `users` (`id`);
+
+
+
